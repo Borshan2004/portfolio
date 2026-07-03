@@ -1,4 +1,4 @@
-import type { ExperienceItem, EducationItem, Project,AboutItem } from "@/types";
+import type { ExperienceItem, EducationItem, Project } from "@/types";
 
 export const PROFILE = {
   name: "Borshan Purification",
@@ -16,6 +16,7 @@ export const PROFILE = {
     { value: "2", label: "Languages fluent in" },
     { value: "∞", label: "Cups of tea" },
   ],
+  highlight: "Full-Stack Developer"
 };
 
 // export const ABOUT: AboutItem[] = [

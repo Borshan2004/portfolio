@@ -1,7 +1,8 @@
 import axios from "axios";
 import type { ContactPayload, Project } from "@/types";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4000/api";
+// import.meta.env may not be typed in some TS configs; cast to any to avoid type error
+const API_URL = (import.meta as any).env?.VITE_API_URL || "http://localhost:4000/api";
 
 export const api = axios.create({
   baseURL: API_URL,
