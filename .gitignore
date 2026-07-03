@@ -1,8 +1,3 @@
-       .env.example
-       
-        index.html
-        node_modules/
-        package-lock.json
-        package.json
-        tsconfig.json
-        vite.config.ts
+node_modules
+dist
+.env
