@@ -73,53 +73,56 @@ export const SKILLS = [
 export const PROJECTS: Project[] = [
   {
     id: "proj-1",
-    title: "Football Ticket Booking System",
-    slug: "football-ticket-booking",
+    title: "BPFunStore – App Store Platform",
+    slug: "bpfunstore-app-store",
     shortDescription:
-      "A booking platform for match tickets with seat selection and PostgreSQL-backed inventory.",
+      "An AppStore-style platform where users can browse, install, and review apps across categories like Gaming, Education, and Productivity.",
     fullDescription:
-      "Designed the schema (Users, Matches, Bookings), wrote SQL for availability checks, and built the ERD from scratch as a database systems project.",
+      "Built a full app marketplace experience with a dynamic navbar, JSON-driven app data, and a promotional slider. Implemented Firebase authentication (email/password + Google sign-in), user profile management via updateProfile(), and a full install/uninstall flow that gates review submission behind installation. Protected routes ensure app detail pages are only viewable when logged in, and the whole UI is fully responsive with toast/SweetAlert feedback for user actions.",
     image: "",
     liveLink: "",
-    githubLink: "https://github.com/yourname/football-ticket-booking",
+    githubLink: "",
     challenges:
-      "Handling concurrent booking attempts safely — two users could try to book the same seat at once. Solved with row-level locking in the SQL query rather than application-level checks.",
+      "Gating reviews behind installation state without it feeling clunky — had to track install status per user per app and reflect it instantly in the UI. Also implemented a 'forget password' flow without email verification, which required rethinking the usual reset pattern.",
     futurePlans:
-      "Add payment integration, email confirmations, and an admin dashboard for match scheduling.",
-    technologies: ["PostgreSQL", "Node.js", "Express", "React"],
+      "Add a payment/premium apps tier, an admin dashboard for managing app listings, and server-side review moderation.",
+    technologies: ["React", "React Router", "Firebase Authentication", "JavaScript", "Tailwind CSS"],
     featured: true,
   },
   {
     id: "proj-2",
-    title: "Digital Logic Simulator",
-    slug: "digital-logic-simulator",
+    title: "OceanStay – Hotel Booking Platform",
+    slug: "oceanstay-hotel-booking",
     shortDescription:
-      "Interactive React app for building and simulating logic gate circuits and truth tables.",
+      "A modern hotel room booking platform with real-time availability, secure auth, and a post-booking review system.",
     fullDescription:
-      "Built to visualize K-map simplification and Boolean algebra concepts from coursework. Renders gates on a canvas and computes truth tables live.",
+      "Built a full booking flow where users can explore detailed room listings, check real-time availability, and book rooms with the ability to update dates or cancel anytime. Reviews are only allowed after a completed booking. Authentication supports email/password plus Google and GitHub OAuth, with all MongoDB and Firebase credentials secured via environment variables.",
     image: "",
     liveLink: "",
-    githubLink: "https://github.com/yourname/logic-simulator",
+    githubLink: "",
     challenges:
-      "Getting the canvas re-render to stay in sync with circuit state changes without lag, especially with wrap-around K-map adjacency.",
-    futurePlans: "Add support for 4-variable K-maps and export circuits as shareable links.",
-    technologies: ["React", "TypeScript", "Tailwind CSS"],
-    featured: false,
+      "Keeping booking availability accurate in real time so two users couldn't double-book the same room, while still keeping the UI responsive and the review system locked to verified bookings only.",
+    futurePlans:
+      "Migrate the backend toward PostgreSQL + Prisma, add TypeScript throughout, and build an admin dashboard for hotel/room management.",
+    technologies: ["React", "Tailwind CSS", "DaisyUI", "Node.js", "Express.js", "MongoDB", "Firebase"],
+    featured: true,
   },
   {
     id: "proj-3",
-    title: "Personal Portfolio API",
-    slug: "personal-portfolio-api",
+    title: "BPPlantCare – Plant Care Tracker",
+    slug: "bpplantcare-tracker",
     shortDescription:
-      "The REST API powering this site — projects, technologies, and contact messages.",
+      "A full-stack plant inventory and care tracker that monitors watering schedules, vitality scores, and care difficulty.",
     fullDescription:
-      "Layered backend architecture: routes → controllers → services → repositories, with Zod validation and a normalized many-to-many schema for project technologies.",
+      "A digital assistant for plant owners: tracks each plant's category, care level, watering frequency, and a computed 'vitality score' health status. Includes a full CRUD flow (add, view, update, delete plants) with a dedicated plant detail view, plus a dark/light mode toggle and Firebase-secured private routes.",
     image: "",
     liveLink: "",
-    githubLink: "https://github.com/yourname/portfolio",
-    challenges: "Designing the many-to-many Project↔Technology relationship cleanly with Prisma.",
-    futurePlans: "Add an admin dashboard so projects can be managed without touching Prisma Studio directly.",
-    technologies: ["Node.js", "Express", "Prisma", "PostgreSQL"],
+    githubLink: "",
+    challenges:
+      "Designing the watering schedule logic so 'next due' dates recalculate correctly from 'last watered' plus frequency, and representing health as an intuitive vitality percentage rather than a raw status flag.",
+    futurePlans:
+      "Add watering reminder notifications, photo history per plant to track growth, and a shared/family plant collection mode.",
+    technologies: ["React", "Tailwind CSS", "DaisyUI", "Node.js", "Express", "MongoDB", "Firebase"],
     featured: false,
-  },
+  }
 ];
