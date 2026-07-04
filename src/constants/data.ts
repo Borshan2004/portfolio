@@ -79,8 +79,8 @@ export const PROJECTS: Project[] = [
       "An AppStore-style platform where users can browse, install, and review apps across categories like Gaming, Education, and Productivity.",
     fullDescription:
       "Built a full app marketplace experience with a dynamic navbar, JSON-driven app data, and a promotional slider. Implemented Firebase authentication (email/password + Google sign-in), user profile management via updateProfile(), and a full install/uninstall flow that gates review submission behind installation. Protected routes ensure app detail pages are only viewable when logged in, and the whole UI is fully responsive with toast/SweetAlert feedback for user actions.",
-    image: "",
-    liveLink: "",
+    image: './public/project1.png',
+    liveLink: "https://incandescent-pika-714a23.netlify.app",
     githubLink: "",
     challenges:
       "Gating reviews behind installation state without it feeling clunky — had to track install status per user per app and reflect it instantly in the UI. Also implemented a 'forget password' flow without email verification, which required rethinking the usual reset pattern.",
@@ -97,7 +97,7 @@ export const PROJECTS: Project[] = [
       "A modern hotel room booking platform with real-time availability, secure auth, and a post-booking review system.",
     fullDescription:
       "Built a full booking flow where users can explore detailed room listings, check real-time availability, and book rooms with the ability to update dates or cancel anytime. Reviews are only allowed after a completed booking. Authentication supports email/password plus Google and GitHub OAuth, with all MongoDB and Firebase credentials secured via environment variables.",
-    image: "",
+    image: './public/project2.png',
     liveLink: "",
     githubLink: "",
     challenges:
@@ -115,7 +115,7 @@ export const PROJECTS: Project[] = [
       "A full-stack plant inventory and care tracker that monitors watering schedules, vitality scores, and care difficulty.",
     fullDescription:
       "A digital assistant for plant owners: tracks each plant's category, care level, watering frequency, and a computed 'vitality score' health status. Includes a full CRUD flow (add, view, update, delete plants) with a dedicated plant detail view, plus a dark/light mode toggle and Firebase-secured private routes.",
-    image: "",
+    image: './public/BPPlantCare_screens.png',
     liveLink: "",
     githubLink: "",
     challenges:
